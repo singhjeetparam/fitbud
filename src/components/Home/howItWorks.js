@@ -27,7 +27,7 @@ const timeline = [
 
 export function HowItWorks() {
   return (
-    <div className="bg-white py-24 sm:py-32 relative isolate ">
+    <div className="bg-white py-24 sm:py-32 relative isolate " id="learnMore">
       <div
         className="absolute inset-x-0 top-1/3 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl"
         aria-hidden="true"
