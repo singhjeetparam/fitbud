@@ -1,4 +1,6 @@
 import Image from "next/image"
+import Link from 'next/link'
+
 export  function CTA() {
     return (
       <div className="relative bg-white py-16">
@@ -72,12 +74,12 @@ export  function CTA() {
                 <p className="text-lg text-white">
                 Embark on a personalized fitness journey with FitBud. Tailor your workouts, harness AI intelligence, and achieve your fitness goals. Start now for a healthier, stronger you!
                 </p>
-                <a
+                <Link
                   className="block w-full rounded-md border border-transparent bg-white px-5 py-3 text-center text-base font-medium text-cyan-6ṭ00 shadow-md hover:bg-gray-50 sm:inline-block sm:w-auto"
-                  href="#"
+                  href="/workout"
                 >
                   Create Your Custom Workout
-                </a>
+                </Link>
               </div>
             </div>
           </div>

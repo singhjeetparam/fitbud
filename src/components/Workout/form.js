@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
+import { createWorkout } from "@/app/api/openAI";
 
 export function Form() {
   const [userData, setUserData] = useState({
@@ -25,8 +26,14 @@ export function Form() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
+    try{
+      await createWorkout(userData)
+    }
+    catch(err){ 
+      console.log(err)
+    }
   };
 
   return (
@@ -39,6 +46,7 @@ export function Form() {
             className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
             width={2432}
             height={1442}
+            priority={true}
           />
           <div className="relative" aria-hidden="true">
             <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]" />
